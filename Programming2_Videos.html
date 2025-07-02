@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>دورات التدريب المدفوعة - فيديوهات برمجة 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <video autoplay muted loop class="background-gif">
+            <source src="Sam’s learning trip (2) copy.mp4" type="video/mp4">
+            متصفحك لا يدعم فيديو الفيديو.
+        </video>
+        <div id="fade-container">
+            <h1>SLT</h1>
+            <small>افتح الإمكانيات مع دوراتنا التدريبية</small>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">الرئيسية</a></li>
+                <li><a href="Sign In.html">تسجيل دخول/ إنشاء حساب</a></li>
+                <li><a href="Courses.html">الدورات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="Account.html">الحساب</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="stack-sections">
+
+        <section>
+            <h2>الدرس الأول - شرح التجربة المجانية</h2>
+            <p>شاهد الفيديو التوضيحي المجاني أدناه للحصول على معاينة لمحتوى دورتنا:</p>
+            <video id="Lesson1" controls style="width: 50%;">
+                <source src="lec1-part1.mp4" type="video/mp4">
+                متصفحك لا يدعم فيديو الفيديو.
+            </video>
+            <br>
+            <button class="btn" onclick="playPause()">تشغيل/إيقاف مؤقت</button>
+            <button class="btn" onclick="makeBig()">تكبير</button>
+            <button class="btn" onclick="makeSmall()">تصغير</button>
+            <button class="btn" onclick="makeNormal()">الوضع العادي</button>
+
+            <br> <br>
+
+            <p>هل أنت مستعد لفتح محتوى الدورة بالكامل؟<a href="Sign In.html"><br>تسجيل الدخول/إنشاء حساب</a></p>
+        </section>
+        <section>
+            <h2>الدروس</h2>
+            <video controls class="paid" style="width: 60%; height: auto;">
+                <source src="demo_video.mp4" type="video/mp4">
+                متصفحك لا يدعم فيديو الفيديو.
+            </video>
+            <button onclick="showAlert('Watch Lesson')" class="btn">مشاهدة الدرس</button>
+        </section>
+        <section>
+            <h2>العملي</h2>
+            <video controls class="paid">
+                <source src="demo_video.mp4" type="video/mp4">
+                متصفحك لا يدعم فيديو الفيديو.
+            </video>
+            <button onclick="showAlert('Watch Lab Lessons')" class="btn">مشاهدة دروس العملي</button>
+        </section>
+        <section>
+            <h2>الملخصات</h2>
+            <video controls class="paid">
+                <source src="demo_video.mp4" type="video/mp4">
+                متصفحك لا يدعم فيديو الفيديو.
+            </video>
+            <button onclick="showAlert('See Summaries')" class="btn">شاهد الملخصات</button>
+        </section>
+    </main>
+    <footer>
+        <p>  2025 SLT Training. جميع الحقوق محفوظة </p>
+    </footer>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورات التدريب المدفوعة - الحساب</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <video autoplay muted loop class="background-gif">
+            <source src="Sam’s learning trip (2) copy.mp4" type="video/mp4">
+            متصفحك لا يدعم فيديو الفيديو.
+        </video>
+
+        <div id="fade-container">
+            <h1>SLT</h1>
+            <small>افتح الإمكانيات مع دوراتنا التدريبية</small>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">الرئيسية</a></li>
+                <li><a href="Sign In.html">تسجيل دخول/ إنشاء حساب</a></li>
+                <li><a href="Courses.html">الدورات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="Account.html">الحساب</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-sections">
+        <section class="user-info">
+            <h2>معلومات الحساب</h2>
+            <p><i class='bx bxs-user'></i> اسم المستخدم: <span id="username">The great SAM</span></p><br>
+            <p><i class='bx bxs-envelope'></i> البريد الإلكتروني: <span id="email">SAMtheGREATEST@gmail.com</span></p><br>
+            <p><i class='bx bxs-phone'></i> الهاتف: <span id="phone">+966504940712</span></p><br>
+            <div class="profile-pic">
+                <img src="ul.webp" alt="صورة الملف الشخصي" class="profile-img">
+            </div>
+            <button onclick="window.print()" class="btn">اطبع هذه الصفحة</button>
+        </section>
+
+        <section class="enrolled-courses">
+            <h2>الدورات المسجلة</h2>
+            <ul>
+                <li><i class='bx bxs-book'></i> الدورة 1: مقدمة في البرمجة 1</li><br>
+                <li><i class='bx bxs-book'></i> الدورة 2: جافا سكريبت المتقدمة</li><br>
+                <li><i class='bx bxs-book'></i> الدورة 3: تطوير الويب</li><br>
+            </ul>
+            <h2>الدورات المكتملة</h2>
+            <ul>
+                <li><i class='bx bxs-book'></i> الدورة 1: أساسيات HTML و CSS</li><br>
+                <li><i class='bx bxs-book'></i> الدورة 2: مقدمة في بايثون</li><br>
+                <li><i class='bx bxs-book'></i> الدورة 3: هياكل البيانات والخوارزميات</li><br>
+            </ul>
+        </section>
+
+        <section class="update-info">
+            <h2>تحديث معلومات الحساب</h2>
+            <form id="updateForm">
+                <label for="updateUsername"><i class='bx bxs-user'></i>اسم المستخدم:</label><br>
+                <input type="text" id="updateUsername" name="updateUsername" required><br><br>
+                <label for="updateEmail"><i class='bx bxs-envelope'></i>البريد الإلكتروني:</label><br>
+                <input type="email" id="updateEmail" name="updateEmail" required><br><br>
+                <label for="updatePhone"><i class='bx bxs-phone'></i>الهاتف:</label><br>
+                <input type="tel" id="updatePhone" name="updatePhone" required><br><br>
+                <input type="submit" value="إرسال" class="btn">
+                <input type="reset" value="حذف" class="btn">
+            </form>
+        </section>
+
+        <section class="payment-info">
+            <h2>تحديث معلومات الدفع</h2>
+            <form id="paymentForm" action="payment_process.php" method="post" onsubmit="return redirectToSuccessPage()">
+                <label for="cardNumber"><i class='bx bxs-credit-card'></i> رقم البطاقة:</label><br>
+                <input type="text" id="cardNumber" name="cardNumber" required><br><br>
+                <label for="expiryDate"><i class='bx bx-calendar'></i> تاريخ انتهاء الصلاحية:</label><br>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required><br><br>
+                <label for="cvv"><i class='bx bxs-lock'></i> CVV:</label><br>
+                <input type="text" id="cvv" name="cvv" maxlength="3" required><br><br>
+                <input type="submit" value="إرسال" class="btn">
+                <input type="reset" value="حذف" class="btn">
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>2025 SLT Training. دورات عبر الإنترنت. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
